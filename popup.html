@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Saved Tabs</h2>
+  <div id="categories">
+    <div class="category" data-category="Work">
+      <h3>Work</h3>
+      <ul class="tab-list" id="work-list"></ul>
+    </div>
+    <div class="category" data-category="Personal">
+      <h3>Personal</h3>
+      <ul class="tab-list" id="personal-list"></ul>
+    </div>
+  </div>
+  <button id="saveTabBtn">Save Current Tab</button>
+  <select id="categorySelect">
+    <option value="work">Work</option>
+    <option value="personal">Personal</option>
+  </select>
+
+  <script src="popup.js"></script>
+</body>
+</html>
