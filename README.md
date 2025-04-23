@@ -46,9 +46,6 @@
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
   - [Usage](#usage)
-  - [Screenshots](#screenshots)
-    - [Popup Panel](#popup-panel)
-    - [Categorized Tab List](#categorized-tab-list)
   - [Roadmap](#roadmap)
   - [Contributing](#contributing)
     - [How to Contribute](#how-to-contribute)
@@ -122,20 +119,6 @@ Features include:
 - Switch between **dark and light mode**, or toggle **language** between English and Chinese.
 
 [Back to top](#simple-tab-manager)
-
-
-## Screenshots
-
-### Popup Panel
-
-![Popup Controls](assets/screenshots/popup-controls.png)
-
-### Categorized Tab List
-
-![Tab List](assets/screenshots/category-tabs.png)
-
-[Back to top](#simple-tab-manager)
-
 
 ## Roadmap
 
