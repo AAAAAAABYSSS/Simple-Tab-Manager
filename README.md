@@ -17,7 +17,6 @@
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
   - [Usage](#usage)
-  - [Screenshots](#screenshots)
   - [Technologies Used](#technologies-used)
   - [Roadmap](#roadmap)
   - [Contributing](#contributing)
@@ -65,12 +64,6 @@
 - Use the arrow icon next to category name to expand/collapse.
 - Click **Import Bookmarks** to load from Chrome’s bookmarks.
 - Import/Export JSON for backup and sharing.
-
-## Screenshots
-
-<img src="assets/screenshots/popup-controls.png" alt="Controls Panel" width="600"/>
-<img src="assets/screenshots/category-tabs.png" alt="Category Tabs" width="600"/>
-
 
 ## Technologies Used
 
