@@ -6,86 +6,101 @@
 [![CSS](https://img.shields.io/badge/Style-CSS3-blue?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> A minimal, customizable Chrome extension for managing and saving browser tabs in categorized collections.
-> Authors: Yelle
+> A lightweight and customizable Chrome extension for organizing, saving, and restoring your tabs through category-based management.
+
+## Table of Contents
+
+- [Simple Tab Manager](#simple-tab-manager)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+  - [Screenshots](#screenshots)
+  - [Technologies Used](#technologies-used)
+  - [Roadmap](#roadmap)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Features
 
-- **Save Current Tab** to categorized collections
-- **Create Custom Categories** (with icons & colors)
-- **Star Important Tabs** for pinning them to the top
-- **Collapse / Expand Categories** to focus on relevant groups
-- **Import Bookmarks** from Chrome's default bookmarks
-- **Export / Import Tabs as JSON** for backup and restore
-- **Dark Mode** support
-- **Multi-language** (English and Chinese toggle)
-- **Set Default Category** for quick saves
+- Save current tab into categorized groups
+- Create custom categories with icons and colors
+- Star (pin) important tabs for priority display
+- Collapse or expand categories for focused viewing
+- Import tabs from Chrome Bookmarks
+- Import/Export tab data in JSON format
+- Dark mode toggle
+- English and Chinese language toggle
+- Set default category for one-click saving
 
----
+## Getting Started
 
-## Installation
+### Prerequisites
+
+- Google Chrome browser
+
+### Installation
 
 1. Clone the repository:
 
-```bash
-git clone git@github.com:AAAAAAABYSSS/Simple-Tab-Manager.git
-```
+   ```bash
+   git clone git@github.com:AAAAAAABYSSS/Simple-Tab-Manager.git
+   ```
 
-2. Open Chrome and navigate to:
+2. Navigate to `chrome://extensions/` in Chrome.
 
-```
-chrome://extensions/
-```
+3. Enable **Developer Mode** (top right).
 
-3. Enable **Developer Mode**
-
-4. Click **"Load unpacked"** and select the `Simple-Tab-Manager` directory
-
----
+4. Click **"Load unpacked"** and select the `Simple-Tab-Manager` directory.
 
 ## Usage
 
-- Click the extension icon to open the popup interface.
-- Create a new category using **New Category**.
-- Click **Save Tab** to store the current page into the selected category.
-- Click **Style** to choose a color and icon for the category.
-- Click the star button to **pin** important tabs to the top.
-- Use the **collapse/expand arrow** to toggle category visibility.
-- Use **Import Bookmarks** or **Import JSON** to load saved content.
-- Export all saved tabs with **Export All Tabs**.
+- Open the extension from the toolbar.
+- Add categories via **New Category**.
+- Save the current tab using **Save Tab**.
+- Customize a category with **Style** (choose icon and color).
+- Star tabs to pin them at the top.
+- Use the arrow icon next to category name to expand/collapse.
+- Click **Import Bookmarks** to load from Chrome’s bookmarks.
+- Import/Export JSON for backup and sharing.
 
----
+## Screenshots
 
-## Technologies
+<img src="assets/screenshots/popup-controls.png" alt="Controls Panel" width="600"/>
+<img src="assets/screenshots/category-tabs.png" alt="Category Tabs" width="600"/>
 
-- Plain JavaScript (no frameworks)
-- Chrome Extension APIs:
+
+## Technologies Used
+
+- **JavaScript** – Vanilla JS, no frameworks
+- **HTML5 / CSS3** – Structured UI with dark/light themes
+- **Chrome Extension APIs**:
   - `chrome.storage.local`
   - `chrome.bookmarks`
   - `chrome.tabs`
-- CSS for dark mode and layout
-
----
 
 ## Roadmap
 
-- [x] Style editor (icon & color)
-- [x] JSON import/export
-- [x] Bookmark import
+- [x] Style editor (icon and color)
+- [x] Import/Export as JSON
+- [x] Bookmark importer
+- [x] Dark/light theme toggle
 - [x] Multilingual support
-- [x] Dark mode toggle
-- [ ] Sync with `chrome.storage.sync`
+- [x] Collapsible categories
+- [x] Default category setting
+- [ ] Sync via `chrome.storage.sync`
+- [ ] Search keyword highlighting
 - [ ] Keyboard shortcuts
-- [ ] Search highlighting
 
----
 
 ## Contributing
 
-Feel free to open issues or submit PRs. For major changes, open a discussion first.
+Contributions are welcome! Please fork the repository and submit a pull request. For major changes, consider opening an issue first to discuss the proposed changes.
 
----
 
 ## License
 
-MIT License.
+Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
+
