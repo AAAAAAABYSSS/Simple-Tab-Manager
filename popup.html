@@ -4,25 +4,97 @@
   <meta charset="UTF-8">
   <title>Tab Manager</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      min-width: 400px;
+      max-width: 480px;
+      padding: 16px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .panel {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .panel h3 {
+      margin-top: 0;
+      font-weight: 600;
+    }
+
+    button, select, input[type="text"], input[type="color"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    #styleEditor {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 12px;
+      margin-top: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    #styleEditor h4 {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
-  <h2>Saved Tabs</h2>
-  <div id="categories">
-    <div class="category" data-category="Work">
-      <h3>Work</h3>
-      <ul class="tab-list" id="work-list"></ul>
-    </div>
-    <div class="category" data-category="Personal">
-      <h3>Personal</h3>
-      <ul class="tab-list" id="personal-list"></ul>
-    </div>
+
+  <h2>📚 Saved Tabs</h2>
+
+  <!-- 🔧 Controls Panel -->
+  <div class="panel">
+    <h3>🔧 Controls</h3>
+    <button id="addCategoryBtn">➕ New Category</button>
+    <button id="saveTabBtn">💾 Save Current Tab</button>
+    <input type="text" id="searchInput" placeholder="🔍 Search tabs...">
+    <select id="categorySelect"></select>
+    <button id="langToggleBtn">🌐 Language</button>
+    <button id="toggleThemeBtn">🌓 Toggle Theme</button>
   </div>
-  <button id="saveTabBtn">Save Current Tab</button>
-  <select id="categorySelect">
-    <option value="work">Work</option>
-    <option value="personal">Personal</option>
-  </select>
+
+  <!-- 📁 Import Export Panel -->
+  <div class="panel">
+    <h3>📁 Import / Export</h3>
+    <button id="importBookmarks">📥 Import Bookmarks</button>
+    <input type="file" id="importFile" accept=".json" style="display:none;">
+    <button id="importJsonBtn">📂 Import JSON</button>
+    <button id="exportBtn">📤 Export All Tabs</button>
+  </div>
+
+  <!-- 🗂️ Category Display -->
+  <div id="categoryContainer"></div>
+
+  <!-- 🎨 Style Editor Card -->
+  <div id="styleEditor" style="display:none;">
+    <h4>🎨 Style Category</h4>
+    <label>Icon:</label>
+    <select id="iconPicker">
+      <option value="💼">💼 Work</option>
+      <option value="🏠">🏠 Home</option>
+      <option value="🎓">🎓 Study</option>
+      <option value="🧠">🧠 Thinking</option>
+      <option value="💡">💡 Ideas</option>
+    </select><br><br>
+
+    <label>Color:</label>
+    <input type="color" id="colorPicker" value="#ffcc00"><br><br>
+
+    <button id="saveStyleBtn">💾 Save Style</button>
+  </div>
 
   <script src="popup.js"></script>
+
 </body>
 </html>

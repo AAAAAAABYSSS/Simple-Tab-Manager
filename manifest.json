@@ -1,15 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "Simple Tab Manager",
-    "version": "1.0",
-    "description": "Save and categorize your tabs like tabExtend.",
-    "permissions": ["tabs", "storage"],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": "icons/icon.png"
+  "manifest_version": 3,
+  "name": "Simple Tab Manager",
+  "version": "1.0",
+  "description": "Save and categorize your tabs like tabExtend.",
+  "permissions": ["tabs", "storage", "bookmarks"],  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
     },
-    "background": {
-      "service_worker": "background.js"
-    }
+    "default_title": "Tab Manager"
+  },
+  "host_permissions": ["<all_urls>"],  
+  "background": {
+    "service_worker": "background.js"
   }
-  
+}
