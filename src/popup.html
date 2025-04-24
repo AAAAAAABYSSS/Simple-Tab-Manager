@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      min-width: 400px;
+      max-width: 480px;
+      padding: 16px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .panel {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .panel h3 {
+      margin-top: 0;
+      font-weight: 600;
+    }
+
+    button, select, input[type="text"], input[type="color"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    #styleEditor {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    #styleEditor h4 {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Saved Tabs</h2>
+
+  <!-- Search Panel -->
+  <div class="panel">
+    <h3>Search</h3>
+    <input type="text" id="searchInput" placeholder="Search tabs...">
+  </div>
+
+  <!-- Category View -->
+  <div id="categoryContainer"></div>
+
+  <!-- Style Editor -->
+  <div id="styleEditor" style="display:none;">
+    <h4>Style Category</h4>
+    <label for="iconPicker">Icon:</label>
+    <select id="iconPicker">
+      <option value="💼">Work</option>
+      <option value="🏠">Home</option>
+      <option value="🎓">Study</option>
+      <option value="🧠">Thinking</option>
+      <option value="💡">Ideas</option>
+    </select><br><br>
+
+    <label for="colorPicker">Color:</label>
+    <input type="color" id="colorPicker" value="#ffcc00"><br><br>
+
+    <button id="saveStyleBtn">Save Style</button>
+  </div>
+
+  <!-- Controls -->
+  <div class="panel">
+    <h3>Controls</h3>
+    <button id="addCategoryBtn">New Category</button>
+    <select id="categorySelect"></select>
+    <button id="saveTabBtn">Save Tab</button>
+    <button id="langToggleBtn">Language</button>
+    <button id="toggleThemeBtn">Toggle Theme</button>
+  </div>
+
+  <!-- Import / Export -->
+  <div class="panel">
+    <h3>Import / Export</h3>
+    <button id="importOptionsBtn">Import JSON</button>
+    <input type="file" id="importFile" accept=".json" style="display:none;">
+    <button id="exportBtn">Export All Tabs</button>
+  </div>
+
+  <!-- Selective Bookmark Import -->
+  <div class="panel">
+    <h3>Selective Bookmark Import</h3>
+    <button id="showBookmarkImporter">Show Bookmark Tree</button>
+  </div>
+
+  <!-- Bookmark Tree UI (Initially Hidden) -->
+  <div class="panel" id="bookmarkImporter" style="display:none;">
+    <h3>Bookmark Import</h3>
+    <div id="bookmarkTree"></div>
+    <input type="text" id="bookmarkImportCategory" placeholder="Enter category name (supports subcategories)">
+    <button id="confirmImportBookmarks">Import Selected</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
